@@ -1,0 +1,19 @@
+{
+  "name": "diploma_front",
+  "version": "1.0.0",
+  "description": "2nd Stage of Y.Praktikum - Git and Front",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atm0Sphere94/diploma_front.git"
+  },
+  "author": "Oleg Malyshev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Atm0Sphere94/diploma_front/issues"
+  },
+  "homepage": "https://github.com/Atm0Sphere94/diploma_front#readme"
+}
