@@ -1,6 +1,6 @@
 import "./pages/articles.css";
 
-/* Temporary */
+/* Анимация кнопок в header - Временно  */
 const header = document.querySelector('.header');
 
 header.addEventListener('click', function (event) {
