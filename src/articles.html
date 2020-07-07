@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="keywords" content="news explorer, новости по запросу, хранение новстей" />
-  <meta name="description" content="Сервис для поиска и хранения новостей по запросу." />
-  <meta name="author" content="Roman Kravchenko" />
-  <title>Сохранённые статьи | News Explorer</title>
+  <meta name="keywords" content="Новости, сохранить новость, сервис новостей" />
+  <meta name="description" content="Фронтэнд сервиса для сохранения статей" />
+  <meta name="author" content="Oleg Malyshev" />
+  <title>Главная | News Explorer</title>
   <link rel="shortcut icon" type="images/png" href="<%=require('./images/favicon.png') %>" />
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.articles.css %>" />
 </head>
@@ -16,10 +16,8 @@
 <body>
   <div class="root">
     <header class="header container root__section">
-      <!--Logo-->
-      <!--TODO: при авторизации добавлять класс к логотипу .header__logo_white при нажатии на .header__toogle-->
       <a href="./" class="header__logo">News Explorer</a>
-      <!--Menu-->
+      <!--Навигация-->
       <nav class="header__nav header__nav_is-auth">
         <ul class="header__nav-items">
           <li class="header__nav-item">
@@ -57,7 +55,7 @@
           </li>
         </ul>
       </nav>
-      <!--Toogle-->
+      <!--Свитч-кнопка-->
       <button class="header__toogle button" id="hamburger">
         <svg
           width="24"
@@ -78,7 +76,7 @@
       </button>
     </header>
     <main class="root__section">
-      <!--Summary section-->
+      <!--Блок сохраненных статей-->
       <section class="summary container">
         <p class="summary__text summary__text_additional">
           Сохранённые статьи
@@ -92,7 +90,7 @@
           <span class="summary__text summary__text_accent">2 другим</span>
         </p>
       </section>
-      <!--Results section-->
+      <!--Блок результатов поиска-->
       <div class="results results_inner container">
         <div class="results__items">
           <article class="card">
@@ -126,8 +124,8 @@
               alt="Картинка карточки"
             >
             <div class="card__info">
-              <time class="card__date" datetime="2019-08-02">
-                2 августа, 2019
+              <time class="card__date" datetime="2020-07-07">
+                7 июля, 2020
               </time>
               <h3 class="card__title title title_h3">
                 Национальное достояние – парки
@@ -138,7 +136,7 @@
                 парков – охраняемых территорий, где и сегодня каждый может
                 приобщиться к природе.
               </p>
-              <div class="card__source">Лента.ру</div>
+              <div class="card__source">Яндекс.Новости</div>
             </div>
           </article>
           <article class="card">
@@ -172,8 +170,8 @@
               alt="Картинка карточки"
             >
             <div class="card__info">
-              <time class="card__date" datetime="2019-08-02">
-                2 августа, 2019
+              <time class="card__date" datetime="2020-07-08">
+                8 июля, 2020
               </time>
               <h3 class="card__title title title_h3">
                 Лесные огоньки: история одной фотографии
@@ -183,7 +181,7 @@
                 реальности Мексики, чтобы запечатлеть ускользающую
                 красоту одного из местных чудес природы.
               </p>
-              <div class="card__source">Медуза</div>
+              <div class="card__source">NatGeo</div>
             </div>
           </article>
           <article class="card">
@@ -217,8 +215,8 @@
               alt="Картинка карточки"
             >
             <div class="card__info">
-              <time class="card__date" datetime="2019-08-02">
-                2 августа, 2019
+              <time class="card__date" datetime="2020-07-09">
+                9 июля, 2020
               </time>
               <h3 class="card__title title title_h3">
                 «Первозданная тайга»: новый фотопроект Игоря Шпиленка
@@ -228,7 +226,7 @@
                  рассказать о необходимости их сохранения. В этот раз он
                  отправился в Двинско-Пинежскую тайгу, где...
               </p>
-              <div class="card__source">Риа</div>
+              <div class="card__source">Медуза.io</div>
             </div>
           </article>
           <article class="card">
@@ -262,8 +260,8 @@
               alt="Картинка карточки"
             >
             <div class="card__info">
-              <time class="card__date" datetime="2019-08-02">
-                2 августа, 2019
+              <time class="card__date" datetime="2020-07-10">
+                10 июля, 2020
               </time>
               <h3 class="card__title title title_h3">
                 «Первозданная тайга»: новый фотопроект Игоря Шпиленка
@@ -273,7 +271,7 @@
                  рассказать о необходимости их сохранения. В этот раз он
                  отправился в Двинско-Пинежскую тайгу, где...
               </p>
-              <div class="card__source">Риа</div>
+              <div class="card__source">Рамблер</div>
             </div>
           </article>
           <article class="card">
@@ -307,12 +305,12 @@
             <div class="card__info">
               <time class="card__date" datetime="2019-08-02">2 августа, 2019</time>
               <h3 class="card__title title title_h3">
-                «Первозданная тайга»: новый фотопроект Игоря Шпиленка
+                Как организовать себя?
               </h3>
               <p class="card__text">
-                Знаменитый фотограф снимает первозданные леса России, чтобы
-                 рассказать о необходимости их сохранения. В этот раз он
-                 отправился в Двинско-Пинежскую тайгу, где...
+                Время – это не враг, а ваш друг.
+                Вы столько можете сделать, если у вас есть цели и возможности.
+                Главное – это ....
               </p>
               <div class="card__source">Риа</div>
             </div>
@@ -323,7 +321,7 @@
     <!--Footer-->
     <footer class="footer container root__section">
       <div class="footer__copyright">
-        © 2020 Supersite, Powered by News API
+        © 2020 Y.Praktikum | News Explorer, Powered by News API
       </div>
       <div class="footer__links">
         <a href="./" class="footer__link">
