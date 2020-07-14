@@ -3,7 +3,7 @@
   top: 0;
   right: 45px;
   box-sizing: border-box;
-  display: flex;
+  display: none;
   align-items: center;
   opacity: 0;
   visibility: hidden;
@@ -18,4 +18,9 @@
   background-color: #fff;
   color: #000;
   transition: opacity .35s ease-out;
+}
+
+
+.card__tooltip_show {
+  display: flex;
 }

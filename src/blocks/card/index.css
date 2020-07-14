@@ -15,6 +15,7 @@
 @import url(./__button/_mark_active/card__button_mark_active.css);
 
 @import url(./__button/_trash/card__button_trash.css);
+@import url(./__button/_disabled/card__button_disabled.css);
 
 @import url(./__tooltip/card__tooltip.css);
 @import url(./__mark/card__mark.css);

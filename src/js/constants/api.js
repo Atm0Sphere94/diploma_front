@@ -1,5 +1,5 @@
 const MAIN_API = {
-  url: 'https://api.a1mosandbox.ru/',
+  url: 'https://api.a1mosandbox.ru',
   routes: {
     signIn: '/signin',
     signUp: '/signup',
@@ -16,7 +16,7 @@ const NEWS_API = {
   amountDays: 7
 }
 
-const GITHUB_PAGES_MAIN = 'https://atm0sphere94.github.io/diploma_front/';
+const GITHUB_PAGES_MAIN = 'https://Atm0Sphere94.github.io/diploma_front';
 
 export {
   MAIN_API,

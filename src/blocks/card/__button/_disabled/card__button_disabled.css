@@ -1,0 +1,6 @@
+.card__button_disabled {
+  user-select: none;
+  background: red;
+  color: #b6bcbf;
+  box-shadow: none;
+}

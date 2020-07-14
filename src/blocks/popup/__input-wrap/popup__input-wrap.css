@@ -2,7 +2,3 @@
   position: relative;
   margin-bottom: 30px;
 }
-
-.popup__input-wrap:last-of-type {
-  margin-bottom: 0;
-}
