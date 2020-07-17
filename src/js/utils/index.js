@@ -8,7 +8,7 @@ import Auth from '../../js/utils/Auth';
 import MainApi from '../../js/api/MainApi';
 import NewsApi from '../../js/api/NewsApi';
 
-/*Выспомогательный класс содержит общие методы авторизации*/
+/*Вспомогательный класс содержит общие методы авторизации*/
 const auth = new Auth();
 
 /*АПИ*/
