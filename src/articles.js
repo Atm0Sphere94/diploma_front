@@ -113,13 +113,13 @@ const handlerDeleteCard = (e, card, data) => {
   e.stopPropagation();
 
   mainApi
-    .removeArticle(data._id, token)
+    .removeArticle(data._id, token, event)
     .then(() => {
-      const deletedId = data._id;
       card.remove();
+      const deletedId = data._id;
       newsCardList.cards = newsCardList.cards.filter(card => card._id !== deletedId);
       articlesSummary.setCardsData(newsCardList.cards);
-      event.target.closest('.card').remove();
+
 
       if (newsCardList.cards.length === 0) {
         newsCardList.hideResults();
