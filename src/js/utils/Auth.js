@@ -6,10 +6,10 @@ import {
 
 export default class Auth extends BaseComponent {
   _redirectToMainPage() {
-    if (window.location.href === `${GITHUB_PAGES_MAIN}/articles`) {
-      window.location.href = GITHUB_PAGES_MAIN;
+    if (window.location.href === `https://atm0sphere94.github.io/diploma_front/articles`) {
+      window.location.href = `https://atm0sphere94.github.io/diploma_front/` ;
     } else {
-      window.location.href = '/';
+      window.location.href = `https://atm0sphere94.github.io/diploma_front/`;
     }
   }
 
