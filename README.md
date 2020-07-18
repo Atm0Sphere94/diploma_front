@@ -1,4 +1,4 @@
-## YnPraktikum.diploma_front. v.1.0.0
+# YnPraktikum.diploma_front. v.1.0.0
 ### 3rd Stage Дипломного проекта Я.Практикума - JavaScript - Интерактивная работа приложения.
 
 #### Цель
