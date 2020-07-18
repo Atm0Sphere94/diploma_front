@@ -25,14 +25,20 @@ export default class NewsApi {
 
   getNews(request) {
     return fetch(
-      `${this._url}&apiKey=${this._apiKey}`,
+      `${this._url}?q=Cars&from=${this._from}&to=${this._to}&pageSize=${this._pageSize}&apiKey=${this._apiKey}`,
     )
-      .then(res => res.json())
+    .then((res) => {
+      if (res.ok) {
+          return res.json();
+      } else {
+          return Promise.reject (`Ошибка: ${res.status}`);
+      }
+  })
       .catch((err) => {
         if (err.message === 'Failed to fetch') {
-          return new Error(MESSAGES.errorNotConnect);
+           new Error(MESSAGES.errorNotConnect);
         }
-        return new Error(err);
+        throw new Error(err);
       });
   }
 }

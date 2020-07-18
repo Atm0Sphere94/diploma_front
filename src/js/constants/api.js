@@ -10,7 +10,7 @@ const MAIN_API = {
 };
 
 const NEWS_API = {
-  url: 'https://praktikum.tk/news/v2/top-headlines?country=us',
+  url: 'https://praktikum.tk/news/v2/everything',
   apiKey: 'bdab9afdb3f54105b4acbf586ed328e8',
   pageSize: 100,
   amountDays: 7

@@ -25,12 +25,18 @@ export default class MainApi {
         name,
       }),
     })
-    .then(res => res.json())
+    .then((res) => {
+      if (res.ok) {
+          return res.json();
+      } else {
+          return Promise.reject (`Ошибка: ${res.status}`);
+      }
+  })
     .catch((err) => {
       if (err.message === 'Failed to fetch') {
         return new Error(MESSAGES.errorNotConnect);
       }
-      return new Error(err);
+      throw new Error(err);
     });
   }
 
@@ -46,12 +52,18 @@ export default class MainApi {
           password
         })
       })
-      .then(res => res.json())
+      .then((res) => {
+        if (res.ok) {
+            return res.json();
+        } else {
+            return Promise.reject (`Ошибка: ${res.status}`);
+        }
+    })
       .catch((err) => {
         if (err.message === 'Failed to fetch') {
           return new Error(MESSAGES.errorNotConnect);
         }
-        return err;
+        throw new Error (err);
       });
   }
 
@@ -65,12 +77,18 @@ export default class MainApi {
           authorization: this._token,
         },
       })
-      .then(res => res.json())
+      .then((res) => {
+        if (res.ok) {
+            return res.json();
+        } else {
+            return Promise.reject (`Ошибка: ${res.status}`);
+        }
+    })
       .catch((err) => {
         if (err.message === 'Failed to fetch') {
           return new Error(MESSAGES.errorNotConnect);
         }
-        return err;
+        throw new Error(err);
       });
   }
 
@@ -84,12 +102,18 @@ export default class MainApi {
           authorization: this._token,
         },
       })
-      .then(res => res.json())
+      .then((res) => {
+        if (res.ok) {
+            return res.json();
+        } else {
+            return Promise.reject (`Ошибка: ${res.status}`);
+        }
+    })
       .catch((err) => {
         if (err.message === 'Failed to fetch') {
           return new Error(MESSAGES.errorNotConnect);
         }
-        return err;
+        throw new Error(err);
       });
   }
 
@@ -122,12 +146,18 @@ export default class MainApi {
           image,
         })
       })
-      .then(res => res.json())
+      .then((res) => {
+        if (res.ok) {
+            return res.json();
+        } else {
+            return Promise.reject (`Ошибка: ${res.status}`);
+        }
+    })
       .catch((err) => {
         if (err.message === 'Failed to fetch') {
           return new Error(MESSAGES.errorNotConnect);
         }
-        return err;
+        return new Error(err);
       });
   }
 
@@ -142,12 +172,18 @@ export default class MainApi {
           'Content-Type': 'application/json'
         }
       })
-      .then(res => res.json())
+      .then((res) => {
+        if (res.ok) {
+            return res.json();
+        } else {
+            return Promise.reject (`Ошибка: ${res.status}`);
+        }
+    })
       .catch((err) => {
         if (err.message === 'Failed to fetch') {
           return new Error(MESSAGES.errorNotConnect);
         }
-        return err;
+        throw new Error(err);
       });
   }
 }

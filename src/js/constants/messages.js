@@ -3,6 +3,7 @@ const MESSAGES = {
   validationRequiredField: 'Это обязательное поле',
   validationPassword: 'Пароль должен быть от 8 символов',
   validationEmail: 'Неправильный формат email',
+  validationEmptyField: 'Необходимо заполнить поле поиска',
 
   errorNotConnect: 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз',
 

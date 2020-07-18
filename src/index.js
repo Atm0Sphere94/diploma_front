@@ -16,6 +16,7 @@ import {
   mainApi,
   newsApi
 } from './js/utils/index';
+import { MESSAGES } from './js/constants/messages';
 
 /** Классы */
 import Header from './blocks/header/Header';
@@ -269,6 +270,7 @@ function handleSubmitFormSignUp(event) {
 }
 
 /** Обработчик поиска новостей с формы */
+
 function handlerSearch(event) {
   event.preventDefault();
   searchForm.formDisabled();
@@ -276,7 +278,6 @@ function handlerSearch(event) {
   const token = auth.getToken();
   const searchData = searchForm.getInfo();
   const searchDataValue = Object.values(searchData)[0];
-
   newsCardList.showResults();
   newsCardList.renderLoader();
 
@@ -422,3 +423,4 @@ const handlerShowTooltip = e => {
     tooltip.classList.toggle('card__tooltip_show');
   }
 };
+

@@ -119,6 +119,7 @@ const handlerDeleteCard = (e, card, data) => {
       card.remove();
       newsCardList.cards = newsCardList.cards.filter(card => card._id !== deletedId);
       articlesSummary.setCardsData(newsCardList.cards);
+      event.target.closest('.card').remove();
 
       if (newsCardList.cards.length === 0) {
         newsCardList.hideResults();
