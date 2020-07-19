@@ -25,7 +25,7 @@ export default class NewsApi {
 
   getNews(request) {
     return fetch(
-      `${this._url}?q=Cars&from=${this._from}&to=${this._to}&pageSize=${this._pageSize}&apiKey=${this._apiKey}`,
+      `${this._url}?q=${request}&from=${this._from}&to=${this._to}&pageSize=${this._pageSize}&apiKey=${this._apiKey}`,
     )
     .then((res) => {
       if (res.ok) {
