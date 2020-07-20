@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
+const isProd = !isDev;
 
 const DIST_DIR = path.resolve(__dirname, './dist');
 const IMAGES_DIR = path.join(__dirname, './src/images');
@@ -70,7 +71,7 @@ module.exports = {
                 },
                 mozjpeg: {
                   progressive: true,
-                  quality: 60
+                  quality: 65
                 },
                 optipng: {
                   enabled: false,
@@ -83,7 +84,7 @@ module.exports = {
                   interlaced: false,
                 },
                 webp: {
-                  quality: 70
+                  quality: 75
                 }
               }
             },
@@ -105,7 +106,7 @@ module.exports = {
       filename: './index.html',
       minify: {
         removeComments:true,
-        collapseWhitespace: true,
+        collapseWhitespace: isProd
       },
       chunks: [
         'index',
@@ -117,7 +118,7 @@ module.exports = {
       filename: './articles.html',
       minify: {
         removeComments:true,
-        collapseWhitespace: true,
+        collapseWhitespace: isProd
       },
       chunks: [
         'articles',
